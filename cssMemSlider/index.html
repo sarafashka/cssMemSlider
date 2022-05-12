@@ -5,9 +5,60 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
-  <title>Css Slider</title>
+  <title>CSS Slider</title>
 </head>
 <body>
-  
+  <div class="container">
+    <div class="slider">
+      <div class="slider__images">
+        <input type="radio" name="radioBtn" id = "point1" checked>
+        <input type="radio" name="radioBtn" id = "point2">
+        <input type="radio" name="radioBtn" id = "point3">
+        <input type="radio" name="radioBtn" id = "point4">
+        <input type="radio" name="radioBtn" id = "point5">
+        
+        <img class="slider__img img1" src="./assets/img/1.jpeg" alt="image1">
+        <img class="slider__img img2" src="./assets/img/2.jpeg" alt="image2">
+        <img class="slider__img img3" src="./assets/img/4.jpeg" alt="image3">
+        <img class="slider__img img4" src="./assets/img/2.jpeg" alt="image4">
+        <img class="slider__img img5" src="./assets/img/1.jpeg" alt="image5">
+      </div>
+      
+       <!--
+         <div class="slider__slide">
+          <img src="./assets/img/1.jpeg">
+        </div>
+        <div class="slider__slide">
+          <img src="./assets/img/2.jpeg">
+        </div>
+        <div class="slider__slide">
+          <img src="./assets/img/4.jpeg">
+        </div>
+        <div class="slider__slide">
+          <img src="./assets/img/2.jpeg">
+        </div>
+        <div class="slider__slide">
+          <img src="./assets/img/1.jpeg">
+        </div>
+       --> 
+      <div class="slider__controls controls">
+        <label class="controls__button" for="point1">
+          <div class="controls__dot"></div>
+        </label>
+        <label class="controls__button" for="point2">
+          <div class="controls__dot"></div>
+        </label>
+        <label class="controls__button" for="point3">
+          <div class="controls__dot"></div>
+        </label>
+        <label class="controls__button" for="point4">
+          <div class="controls__dot"></div>
+        </label>
+        <label class="controls__button" for="point5">
+          <div class="controls__dot"></div>
+        </label>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

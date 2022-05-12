@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+}
+.slider__images {
+  width: 100%;
+  display: flex;
+}
+.slider__images input {
+  display: none;
+}
+.slider__img {
+  width: 100%;
+  opacity: 0;
+  z-index: 0;
+  transition: all 0.7s ease-in-out;
+}
+.controls {
+  display: flex;
+  justify-content: end;
+}
+.controls__button {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.controls__dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0.1rem black solid;
+  background-color: black;
+  transition: 0.5s;
+}
+.controls__button:hover .controls__dot{
+  background-color: white;
+}
+#point1:checked ~ .img1 {
+  margin-left: 0;
+  opacity: 1;
+  z-index: 1;
+}
+#point2:checked ~ .img2 {
+  margin-left: -100%;
+  opacity: 1;
+  z-index: 1;
+}
+#point3:checked ~ .img3 {
+  margin-left: -200%;
+  opacity: 1;
+  z-index: 1;
+}
+#point4:checked ~ .img4 {
+  margin-left: -300%;
+  opacity: 1;
+  z-index: 1;
+}
+#point5:checked ~ .img5 {
+  margin-left: -400%;
+  opacity: 1;
+  z-index: 1;
+}
