@@ -76,51 +76,37 @@
 }
 
 
-
 #point1:checked ~ .slider__images .img1,
 #point1:checked ~ .slider__container .slider__texts .txt1 {
   margin-left: 0;
   opacity: 1;
-  z-index: 1;
 }
 #point2:checked ~ .slider__images .img2,
 #point2:checked ~ .slider__container .slider__texts .txt2 {
   transform: translateX(-100%);
   opacity: 1;
-  z-index: 1;
 }
 #point3:checked ~ .slider__images .img3,
 #point3:checked ~ .slider__container .slider__texts .txt3 {
   transform: translateX(-200%);
   opacity: 1;
-  z-index: 1;
 }
 #point4:checked ~ .slider__images .img4,
 #point4:checked ~ .slider__container .slider__texts .txt4 {
   transform: translateX(-300%);
   opacity: 1;
-  z-index: 1;
 }
 #point5:checked ~ .slider__images .img5,
 #point5:checked ~ .slider__container .slider__texts .txt5 {
   transform: translateX(-400%);
   opacity: 1;
-  z-index: 1;
 }
 
-#point1:checked ~ .slider__container .controls .dot1 {
-  background-color: white;
-}
-#point2:checked ~ .slider__container .controls .dot2 {
-  background-color: white;
-}
-#point3:checked ~ .slider__container .controls .dot3  {
-  background-color: white;
-}
-#point4:checked ~ .slider__container .controls .dot4 {
-  background-color: white;
-}
-#point5:checked ~ .slider__container .controls .dot5  {
+#point1:checked ~ .slider__container .controls .dot1,
+#point2:checked ~ .slider__container .controls .dot2,
+#point3:checked ~ .slider__container .controls .dot3,
+#point4:checked ~ .slider__container .controls .dot4,
+#point5:checked ~ .slider__container .controls .dot5 {
   background-color: white;
 }
 
