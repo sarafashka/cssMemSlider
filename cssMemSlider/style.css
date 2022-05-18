@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 0 1rem;
+}
+.slider {
+  width: 100%;
+  max-width: 40rem;
+  overflow: hidden;
+}
+.slider__container {
+  width: 101%;
+  display: flex;
+  justify-content: space-between;
+}
+.slider__images,
+.slider__texts {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1rem;
+}
+.slider__text {
+  width: 68%;
+}
+.slider input {
+  display: none;
+}
+.slider__img,
+.slider__txt {
+  width: 100%;
+  opacity: 0;
+  z-index: 0;
+  transition: all 0.7s ease-in-out;
+}
+.slider__txt {
+  flex-shrink: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: white;
+}
+.controls {
+  display: flex;
+  justify-content: end;
+  z-index: 2;
+}
+.controls__button {
+  width: 1.8rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.controls__dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0.1rem white solid;
+  background-color: transparent;
+  transition: 0.5s;
+}
+.controls__button:hover .controls__dot{
+  border: 0.2rem white solid;
+}
+.controls__button:active .controls__dot{
+
+ transform: scale(0.7);
+}
+
+
+#point1:checked ~ .slider__images .img1,
+#point1:checked ~ .slider__container .slider__texts .txt1 {
+  margin-left: 0;
+  opacity: 1;
+}
+#point2:checked ~ .slider__images .img2,
+#point2:checked ~ .slider__container .slider__texts .txt2 {
+  transform: translateX(-100%);
+  opacity: 1;
+}
+#point3:checked ~ .slider__images .img3,
+#point3:checked ~ .slider__container .slider__texts .txt3 {
+  transform: translateX(-200%);
+  opacity: 1;
+}
+#point4:checked ~ .slider__images .img4,
+#point4:checked ~ .slider__container .slider__texts .txt4 {
+  transform: translateX(-300%);
+  opacity: 1;
+}
+#point5:checked ~ .slider__images .img5,
+#point5:checked ~ .slider__container .slider__texts .txt5 {
+  transform: translateX(-400%);
+  opacity: 1;
+}
+
+#point1:checked ~ .slider__container .controls .dot1,
+#point2:checked ~ .slider__container .controls .dot2,
+#point3:checked ~ .slider__container .controls .dot3,
+#point4:checked ~ .slider__container .controls .dot4,
+#point5:checked ~ .slider__container .controls .dot5 {
+  background-color: white;
+}
+
+@media (max-width: 480px) {
+  .slider__container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slider__text {
+    align-self: flex-start;
+  }
+  .controls {
+    order: -1;
+    margin-bottom: 1rem;
+  }
+}
